@@ -9,10 +9,16 @@
 
     //ENTRADA
 
+    const raio = Number(prompt(`Informe o raio do círculo.`));
 
     //PROCESSAMENTO
 
+    function calculo (perimetro) {
+        alert(`O perímetro do círculo é: ${(2 * Math.PI * perimetro).toFixed(2)}`);
+    }
 
     //SAÍDA
+
+    calculo (raio);
 
 </script>

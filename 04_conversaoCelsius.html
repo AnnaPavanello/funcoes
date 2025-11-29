@@ -7,10 +7,16 @@
 
     //ENTRADA
 
+    const conversao = Number(prompt(`Informe a temperatura que deseja converter.`));
 
     //PROCESSAMENTO
 
+    function calcule (formula) {
+        alert(`A temperatura convertida é: ${(formula - 32) * 5 / 9}`);
+    }
 
     //SAÍDA
+
+    calcule (conversao);
 
 </script>

@@ -7,10 +7,17 @@
 
     //ENTRADA
 
+    const peso = Number(prompt(`Informe o seu peso.`));
+    const altura = Number(prompt(`Informe a sua altura.`));
 
     //PROCESSAMENTO
 
+    function calculo (imcPeso, imcAltura) {
+        alert(`O IMC é: ${(imcPeso / imcAltura**2).toFixed(2)}`);
+    }
 
     //SAÍDA
+
+    calculo (peso, altura);
 
 </script>
