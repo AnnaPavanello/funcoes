@@ -5,16 +5,18 @@
     */
 
   //ENTRADA
-
-  //CARA, SEMPRE CHAME A FUNÇÃO, NUNCA ESQUEÇA DISSO PARA EVITAR 30 MINUTOS DE DOR DE CABEÇA DE FORMA BURRA
-
+  
   let numero = Number(prompt("Informe um número para calcular o fatorial."));
+  
   //PROCESSAMENTO
+  
   let resultado = 1;
   const fatorial = () => {
     for (let i = 2; i <= numero; i++) {
       resultado *= i;}}
+  
   //SAÍDA
+  
   fatorial();
   alert(resultado);
 </script>
