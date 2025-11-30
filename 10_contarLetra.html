@@ -1,16 +1,48 @@
 <script>
-    /*
-    PROBLEMA: CONTAR LETRA
-    Desenvolva uma função que receba uma frase e uma letra e retorne quantas vezes a letra aparece na frase. A função deve ignorar se a letra é maiúscula ou minúscula. Por exemplo, se o usuário informar a frase "Araquari" e a letra "a", o programa deverá retornar o valor 3, pois a letra "a" aparece 3 vezes na frase.
-    *A frase (ou palavra) e a letra devem ser fornecidas pelo usuário.
-    */
+  /*
+      PROBLEMA: CONTAR LETRA
+      Desenvolva uma função que receba uma frase e uma letra e retorne quantas vezes a letra aparece na frase, ignorando maiúsculas e minúsculas.
+  */
 
-    //ENTRADA
+  // ENTRADA
+
+  let frase = prompt("Informe uma palavra ou uma frase").trim().toLowerCase();
+  let letra = prompt("Informe uma letra").trim().toLowerCase();
+  let separada = frase.split("");
+  let final = [];
+
+  // PROCESSAMENTO
+    
+  function procurar() {
+    for (let i = 0; i < frase.length; i++) {
+      if (separada[i] === letra) {
+        final.push(separada[i]);
+      }
+    }
+  }
+  procurar();
+
+  let resultado;
+  let letraLetras;
 
 
-    //PROCESSAMENTO
+  if (final.length === 1) {
+    resultado = "uma";
+  } else if (final.length === 0) {
+    resultado = 0;
+  } else {
+    resultado = final.length;
+  }
 
+  if (final.length > 1) {
+    letraLetras = "letras";
+  } else if (final.length === 0) {
+    letraLetras = "letras";
+  } else {
+    letraLetras = "letra";
+  }
 
-    //SAÍDA
-
+  // SAÍDA
+    
+  alert(`A frase ou palavra "${frase}" possui ${resultado} ${letraLetras} "${letra}".`);
 </script>
